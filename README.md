@@ -422,48 +422,4 @@ This opens in your browser automatically (usually `http://localhost:8501`).
 Needs existing traces to show anything -- run `python run_demo.py` a few
 times first if you haven't already.
 
-## Roadmap
 
-- [x] **Phase 1 (Days 1–3):** Pipeline skeleton + failure-mode sample docs
-- [x] **Phase 2 (Days 4–6):** Tracing layer — one span per step, capturing
-      input, output, raw LLM response, token count, latency, errors, and a
-      confidence score (1–5) the model assigns to its own output. Traces
-      stored as JSON files indexed in SQLite.
-- [x] **Phase 3 (Days 6–9):** Root-cause analysis — walk backward through
-      spans on any flagged trace. LLM-as-judge scores each step's output
-      quality given its input; the first step with a quality drop is the
-      root cause. Categorize into: Extraction Hallucination,
-      Misclassification, Propagation Error, Context Loss.
-- [x] **Phase 4 (Days 9–11):** Visual trace explorer (Streamlit) —
-      pipeline as nodes, color-coded green/yellow/red by health. Click a
-      node to see full span details; diff view of expected vs. produced.
-      One-click flagging runs the backward analysis and displays the
-      diagnosis.
-- [x] **Phase 5 (Days 11–13):** Feedback loop — every confirmed flag
-      auto-generates an eval case (input, failing output, corrected
-      output, failure category). Periodically re-run the eval dataset to
-      track whether known failures are resolved.
-- [x] **Phase 6 (Days 13–14):** Polish — process 50 documents, ensure
-      8–10 real failures across different types. Demo: bad output in,
-      trace explorer open, root cause diagnosed in seconds.
-- [x] **Phase 7 (partial):** Hardening pass. Done: judge self-consistency
-      (`JUDGE_SAMPLES`, default 3) -- runs the judge multiple times per
-      step and takes the median score / majority category, directly
-      targeting the currency-mismatch false-positive noise the
-      calibration report measured; also fixed the deterministic
-      arithmetic checker's own credit-memo edge case (see CASE_STUDY.md
-      Finding 5). Still open: testing whether a stronger/different judge
-      model (`JUDGE_LLM_PROVIDER=anthropic`) resolves the ambiguity blind
-      spot -- needs an Anthropic API key to test, which is a separate
-      signup/billing from a Claude.ai Pro subscription.
-- [ ] **Phase 8:** Streamlit polish — visual/UX pass on `dashboard.py`:
-      arrows between pipeline nodes, a run-history/trend view instead of
-      one trace at a time, ability to upload and process a new document
-      directly from the dashboard rather than only viewing past runs,
-      general styling pass.
-
-## CV framing (once complete)
-
-> "Built an observability and root-cause-analysis tool for multi-step AI
-> pipelines, reducing mean time to root-cause AI pipeline failures from
-> hours of manual debugging to seconds of automated diagnosis."
