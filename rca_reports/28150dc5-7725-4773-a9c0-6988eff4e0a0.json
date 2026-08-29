@@ -1,0 +1,39 @@
+{
+  "trace_id": "28150dc5-7725-4773-a9c0-6988eff4e0a0",
+  "doc_id": "742489ae",
+  "source_filename": "clean_invoice.txt",
+  "root_cause_step": null,
+  "root_cause_category": "none",
+  "root_cause_explanation": "",
+  "step_verdicts": [
+    {
+      "step_name": "intake",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "Deterministic ingestion step; not LLM-judged.",
+      "specific_issues": []
+    },
+    {
+      "step_name": "extraction",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "[Consensus of 3 judge samples, scores: 5, 5, 5] The extraction step accurately identified all relevant entities, including parties, dates, amounts, currency, reference numbers, and line items. The output is complete and consistent with the source text.",
+      "specific_issues": []
+    },
+    {
+      "step_name": "classification",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "[Consensus of 3 judge samples, scores: 5, 5, 5] The step correctly classified the document as an invoice, and the confidence level is high (0.95). The input entities and line items were accurately extracted and used for classification.",
+      "specific_issues": []
+    },
+    {
+      "step_name": "summarization",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "[Consensus of 3 judge samples, scores: 5, 5, 5] The summarization step accurately captured the essential information from the invoice, including the parties involved, the item description, unit price, total amount, and payment terms. The output summary is concise and correctly reflects the content of the original text.",
+      "specific_issues": []
+    }
+  ],
+  "pipeline_healthy": true
+}

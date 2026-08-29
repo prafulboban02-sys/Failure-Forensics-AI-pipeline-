@@ -1,0 +1,57 @@
+{
+  "span_id": "6037aeaf-2c4f-460b-8c94-ab3840c3bbf2",
+  "trace_id": "cc1cb5a2-022a-4298-8ec7-71cbaa14ea93",
+  "doc_id": "21490bcc",
+  "step_name": "summarization",
+  "source_filename": "clean_invoice.txt",
+  "input_data": {
+    "raw_text": "INVOICE #INV-2026-0417\nDate: March 12, 2026\nBill To: Meridian Logistics Pvt Ltd\nFrom: Aster Manufacturing Co.\n\nItem: Industrial packaging units x 500\nUnit Price: $42.00\nTotal Amount: $21,000.00\nCurrency: USD\nPayment Terms: Net 30",
+    "entities": {
+      "parties": [
+        "Meridian Logistics Pvt Ltd",
+        "Aster Manufacturing Co."
+      ],
+      "dates": [
+        "March 12, 2026"
+      ],
+      "amounts": [
+        21000.0
+      ],
+      "currency": "USD",
+      "reference_numbers": [
+        "INV-2026-0417"
+      ],
+      "line_items": [
+        {
+          "description": "Industrial packaging units x 500",
+          "quantity": 500.0,
+          "unit_price": 42.0,
+          "line_total": null
+        }
+      ]
+    },
+    "document_type": "invoice"
+  },
+  "output_data": {
+    "doc_id": "21490bcc",
+    "summary": "Invoice INV-2026-0414 for 500 Industrial packaging units from Aster Manufacturing Co. to Meridian Logistics Pvt Ltd, due for payment within 30 days.",
+    "key_risk_flags": [
+      "Currency mismatch: USD",
+      "Unusually large amount: $21,000.00"
+    ],
+    "verified_risk_flags": [],
+    "self_confidence": 5,
+    "raw_llm_response": "{\n  \"summary\": \"Invoice INV-2026-0414 for 500 Industrial packaging units from Aster Manufacturing Co. to Meridian Logistics Pvt Ltd, due for payment within 30 days.\",\n  \"key_risk_flags\": [\"Currency mismatch: USD\", \"Unusually large amount: $21,000.00\"],\n  \"self_confidence\": 5\n}",
+    "input_tokens": 493,
+    "output_tokens": 77
+  },
+  "prompt": null,
+  "raw_llm_response": "{\n  \"summary\": \"Invoice INV-2026-0414 for 500 Industrial packaging units from Aster Manufacturing Co. to Meridian Logistics Pvt Ltd, due for payment within 30 days.\",\n  \"key_risk_flags\": [\"Currency mismatch: USD\", \"Unusually large amount: $21,000.00\"],\n  \"self_confidence\": 5\n}",
+  "input_tokens": 493,
+  "output_tokens": 77,
+  "latency_ms": 3823.64,
+  "confidence": 5,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:48:52.953526+00:00"
+}

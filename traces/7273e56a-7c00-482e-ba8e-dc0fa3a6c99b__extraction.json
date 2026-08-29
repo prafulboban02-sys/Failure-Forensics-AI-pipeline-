@@ -1,0 +1,42 @@
+{
+  "span_id": "cbe3dc66-7705-4f8b-bffe-5a4a956d90ae",
+  "trace_id": "7273e56a-7c00-482e-ba8e-dc0fa3a6c99b",
+  "doc_id": "d1db1d71",
+  "step_name": "extraction",
+  "source_filename": "garbled_scan_artifact.txt",
+  "input_data": {
+    "raw_text": "P U R C H A S E   O R D E R\nRef: ###-INVALID-OCR-4471###\n\n[unreadable header]  qty: ?? unit: ??  amt: 4,,200..00  curr: US D\nVendor:  <<name not captured>>\nDelivery window: TBD // TBD // 2026"
+  },
+  "output_data": {
+    "doc_id": "d1db1d71",
+    "entities": {
+      "parties": [
+        "Vendor:  <<name not captured>>"
+      ],
+      "dates": [
+        "2026"
+      ],
+      "amounts": [
+        4200.0
+      ],
+      "currency": "USD",
+      "reference_numbers": [
+        "###-INVALID-OCR-4471###"
+      ],
+      "line_items": []
+    },
+    "extraction_confidence": 0.8,
+    "raw_llm_response": "{\n  \"parties\": [\"Vendor:  <<name not captured>>\"],\n  \"dates\": [\"2026\"],\n  \"amounts\": [4200.0],\n  \"currency\": \"USD\",\n  \"reference_numbers\": [\"###-INVALID-OCR-4471###\"],\n  \"line_items\": [],\n  \"confidence\": 0.8\n}",
+    "input_tokens": 349,
+    "output_tokens": 75
+  },
+  "prompt": null,
+  "raw_llm_response": "{\n  \"parties\": [\"Vendor:  <<name not captured>>\"],\n  \"dates\": [\"2026\"],\n  \"amounts\": [4200.0],\n  \"currency\": \"USD\",\n  \"reference_numbers\": [\"###-INVALID-OCR-4471###\"],\n  \"line_items\": [],\n  \"confidence\": 0.8\n}",
+  "input_tokens": 349,
+  "output_tokens": 75,
+  "latency_ms": 3629.4,
+  "confidence": 4,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:49:05.060835+00:00"
+}

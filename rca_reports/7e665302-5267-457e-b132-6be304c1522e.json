@@ -1,0 +1,39 @@
+{
+  "trace_id": "7e665302-5267-457e-b132-6be304c1522e",
+  "doc_id": "36816e90",
+  "source_filename": "ambiguous_category_doc.txt",
+  "root_cause_step": null,
+  "root_cause_category": "none",
+  "root_cause_explanation": "",
+  "step_verdicts": [
+    {
+      "step_name": "intake",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "Deterministic ingestion step; not LLM-judged.",
+      "specific_issues": []
+    },
+    {
+      "step_name": "extraction",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "[Consensus of 3 judge samples, scores: 5, 5, 5] The step correctly extracted relevant information from the source text, including parties, dates, amounts, currency, and reference numbers. The output is complete and accurate, with no signs of hallucination or misclassification.",
+      "specific_issues": []
+    },
+    {
+      "step_name": "classification",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "[Consensus of 3 judge samples, scores: 5, 5, 5] The step correctly classified the document as a contract, which is supported by the text stating 'serves as the binding service contract'. The input entities were also correctly extracted and used to inform the classification.",
+      "specific_issues": []
+    },
+    {
+      "step_name": "summarization",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "[Consensus of 3 judge samples, scores: 5, 5, 5] The summarization step accurately captured the essential information from the source text, including the parties involved, the purpose of the document, and the key terms. The output summary is concise and accurately reflects the content of the original text.",
+      "specific_issues": []
+    }
+  ],
+  "pipeline_healthy": true
+}

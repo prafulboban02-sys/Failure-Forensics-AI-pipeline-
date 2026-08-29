@@ -1,0 +1,53 @@
+{
+  "span_id": "83ff0eb7-b44b-421b-aa55-383a2475e0a0",
+  "trace_id": "a8f727c0-029e-443d-b955-cd81939d4586",
+  "doc_id": "86b626ed",
+  "step_name": "classification",
+  "source_filename": "clean_invoice.txt",
+  "input_data": {
+    "raw_text": "INVOICE #INV-2026-0417\nDate: March 12, 2026\nBill To: Meridian Logistics Pvt Ltd\nFrom: Aster Manufacturing Co.\n\nItem: Industrial packaging units x 500\nUnit Price: $42.00\nTotal Amount: $21,000.00\nCurrency: USD\nPayment Terms: Net 30",
+    "entities": {
+      "parties": [
+        "Meridian Logistics Pvt Ltd",
+        "Aster Manufacturing Co."
+      ],
+      "dates": [
+        "March 12, 2026"
+      ],
+      "amounts": [
+        21000.0
+      ],
+      "currency": "USD",
+      "reference_numbers": [
+        "INV-2026-0417"
+      ],
+      "line_items": [
+        {
+          "description": "Industrial packaging units x 500",
+          "quantity": 500.0,
+          "unit_price": 42.0,
+          "line_total": null
+        }
+      ]
+    }
+  },
+  "output_data": {
+    "doc_id": "86b626ed",
+    "document_type": "invoice",
+    "classification_confidence": 0.95,
+    "ambiguous": false,
+    "candidate_types": [],
+    "raw_llm_response": "{\n  \"document_type\": \"invoice\",\n  \"confidence\": 0.95,\n  \"ambiguous\": false,\n  \"candidate_types\": []\n}",
+    "input_tokens": 274,
+    "output_tokens": 32
+  },
+  "prompt": null,
+  "raw_llm_response": "{\n  \"document_type\": \"invoice\",\n  \"confidence\": 0.95,\n  \"ambiguous\": false,\n  \"candidate_types\": []\n}",
+  "input_tokens": 274,
+  "output_tokens": 32,
+  "latency_ms": 1960.57,
+  "confidence": 5,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:47:59.896581+00:00"
+}

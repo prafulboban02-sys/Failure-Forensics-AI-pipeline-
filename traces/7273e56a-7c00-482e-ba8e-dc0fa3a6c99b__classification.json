@@ -1,0 +1,45 @@
+{
+  "span_id": "10c9175b-30af-4117-8c26-7e00659de99a",
+  "trace_id": "7273e56a-7c00-482e-ba8e-dc0fa3a6c99b",
+  "doc_id": "d1db1d71",
+  "step_name": "classification",
+  "source_filename": "garbled_scan_artifact.txt",
+  "input_data": {
+    "raw_text": "P U R C H A S E   O R D E R\nRef: ###-INVALID-OCR-4471###\n\n[unreadable header]  qty: ?? unit: ??  amt: 4,,200..00  curr: US D\nVendor:  <<name not captured>>\nDelivery window: TBD // TBD // 2026",
+    "entities": {
+      "parties": [
+        "Vendor:  <<name not captured>>"
+      ],
+      "dates": [
+        "2026"
+      ],
+      "amounts": [
+        4200.0
+      ],
+      "currency": "USD",
+      "reference_numbers": [
+        "###-INVALID-OCR-4471###"
+      ],
+      "line_items": []
+    }
+  },
+  "output_data": {
+    "doc_id": "d1db1d71",
+    "document_type": "purchase_order",
+    "classification_confidence": 0.9,
+    "ambiguous": false,
+    "candidate_types": [],
+    "raw_llm_response": "{\n  \"document_type\": \"purchase_order\",\n  \"confidence\": 0.9,\n  \"ambiguous\": false,\n  \"candidate_types\": []\n}",
+    "input_tokens": 239,
+    "output_tokens": 33
+  },
+  "prompt": null,
+  "raw_llm_response": "{\n  \"document_type\": \"purchase_order\",\n  \"confidence\": 0.9,\n  \"ambiguous\": false,\n  \"candidate_types\": []\n}",
+  "input_tokens": 239,
+  "output_tokens": 33,
+  "latency_ms": 1982.02,
+  "confidence": 4,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:49:07.049735+00:00"
+}

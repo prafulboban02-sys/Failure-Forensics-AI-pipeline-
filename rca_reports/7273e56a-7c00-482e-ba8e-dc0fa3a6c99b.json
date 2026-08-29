@@ -1,0 +1,46 @@
+{
+  "trace_id": "7273e56a-7c00-482e-ba8e-dc0fa3a6c99b",
+  "doc_id": "d1db1d71",
+  "source_filename": "garbled_scan_artifact.txt",
+  "root_cause_step": "extraction",
+  "root_cause_category": "extraction_hallucination",
+  "root_cause_explanation": "[Consensus of 3 judge samples, scores: 2, 2, 2] The step incorrectly extracted the vendor's name as 'Vendor:  <<name not captured>>', which is not supported by the source text. The text explicitly states that the vendor's name was not captured.",
+  "step_verdicts": [
+    {
+      "step_name": "intake",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "Deterministic ingestion step; not LLM-judged.",
+      "specific_issues": []
+    },
+    {
+      "step_name": "extraction",
+      "quality_score": 2,
+      "category": "extraction_hallucination",
+      "reasoning": "[Consensus of 3 judge samples, scores: 2, 2, 2] The step incorrectly extracted the vendor's name as 'Vendor:  <<name not captured>>', which is not supported by the source text. The text explicitly states that the vendor's name was not captured.",
+      "specific_issues": [
+        "extracted vendor name",
+        "incomplete extraction"
+      ]
+    },
+    {
+      "step_name": "classification",
+      "quality_score": 4,
+      "category": "none",
+      "reasoning": "[Consensus of 3 judge samples, scores: 4, 4, 4] The step correctly classified the document as a purchase order, despite some OCR errors and missing information. The confidence level of 0.9 is reasonable given the quality of the input. The step did not attempt to fill in missing information or make assumptions, which is good behavior.",
+      "specific_issues": [
+        "invalid reference number",
+        "missing vendor name",
+        "unclear delivery window"
+      ]
+    },
+    {
+      "step_name": "summarization",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "[Consensus of 3 judge samples, scores: 5, 5, 5] The summarization step correctly identified the key issues with the purchase order, including the invalid reference number, missing vendor name, and ambiguous delivery date. The output accurately reflects the input text and does not introduce any new information.",
+      "specific_issues": []
+    }
+  ],
+  "pipeline_healthy": false
+}

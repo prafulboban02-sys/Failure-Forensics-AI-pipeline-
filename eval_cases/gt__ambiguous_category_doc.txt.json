@@ -1,0 +1,60 @@
+{
+  "eval_id": "gt::ambiguous_category_doc.txt",
+  "source_filename": "ambiguous_category_doc.txt",
+  "relevant_step": "classification",
+  "failure_category": "ground_truth_violation",
+  "description": "Document plausibly reads as both a purchase order and a contract -- classification should report ambiguous=True.",
+  "original_input": {
+    "raw_text": "AGREEMENT & PURCHASE CONFIRMATION #DOC-9921\n\nThis document confirms the purchase order raised by Coastline Retailers for\nQ3 stock, AND serves as the binding service contract governing delivery\npenalties, warranty terms, and dispute resolution for the same order.\n\nTotal commitment: $58,400.00\nCurrency: USD\nEffective Date: April 2, 2026",
+    "entities": {
+      "parties": [
+        "Coastline Retailers"
+      ],
+      "dates": [
+        "April 2, 2026"
+      ],
+      "amounts": [
+        58400.0
+      ],
+      "currency": "USD",
+      "reference_numbers": [
+        "#DOC-9921"
+      ],
+      "line_items": []
+    }
+  },
+  "example_failing_output": {
+    "doc_id": "36816e90",
+    "document_type": "contract",
+    "classification_confidence": 0.9,
+    "ambiguous": false,
+    "candidate_types": [],
+    "raw_llm_response": "{\n  \"document_type\": \"contract\",\n  \"confidence\": 0.9,\n  \"ambiguous\": false,\n  \"candidate_types\": []\n}",
+    "input_tokens": 247,
+    "output_tokens": 32
+  },
+  "corrected_note": null,
+  "origin": "ground_truth",
+  "created_at": "2026-08-29T12:58:48.272294+00:00",
+  "created_from_trace_id": "03d972b4-bb5a-46d0-a2a9-67b1b43de678",
+  "run_history": [
+    {
+      "timestamp": "2026-08-29T12:58:48.272294+00:00",
+      "trace_id": "03d972b4-bb5a-46d0-a2a9-67b1b43de678",
+      "resolved": false,
+      "notes": ""
+    },
+    {
+      "timestamp": "2026-08-29T12:58:48.302772+00:00",
+      "trace_id": "6464ad60-642f-4150-a2a4-130fdbfdbad5",
+      "resolved": false,
+      "notes": ""
+    },
+    {
+      "timestamp": "2026-08-29T12:58:48.326401+00:00",
+      "trace_id": "7e665302-5267-457e-b132-6be304c1522e",
+      "resolved": false,
+      "notes": ""
+    }
+  ]
+}

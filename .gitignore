@@ -1,0 +1,21 @@
+# --- Secrets: never commit these ---
+.env
+
+# --- Virtual environment ---
+venv/
+__pycache__/
+*.pyc
+
+# --- Test artifacts ---
+.pytest_cache/
+
+# --- Generated batch corpus (regenerate with generate_batch_docs.py) ---
+data/batch_docs/*.txt
+
+# NOTE: traces/, rca_reports/, and eval_cases/ are DELIBERATELY NOT
+# ignored. This project's whole point is showing real analysis output --
+# committing a real trace history is what makes the deployed dashboard
+# and the GitHub repo itself show actual findings instead of an empty
+# shell. Before your first commit, run `python run_demo.py` a handful of
+# times and `python analyze_failures.py --all` so there's something real
+# to look at.

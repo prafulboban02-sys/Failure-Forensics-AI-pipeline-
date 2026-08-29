@@ -1,0 +1,25 @@
+{
+  "span_id": "c528cfac-e1ea-47ca-9fc8-5419561a29cd",
+  "trace_id": "677381a0-fc30-44d7-9380-1af5c3c57669",
+  "doc_id": "5314483a",
+  "step_name": "intake",
+  "source_filename": "missing_date_invoice.txt",
+  "input_data": {
+    "source_filename": "missing_date_invoice.txt"
+  },
+  "output_data": {
+    "doc_id": "5314483a",
+    "raw_text": "INVOICE #INV-2026-0418\nBill To: Northfield Retail Group\nFrom: Aster Manufacturing Co.\n\nItem: Warehouse shelving units x 120\nUnit Price: $185.50\nTotal Amount: $22,260.00\nCurrency: USD\nPayment Terms: Net 45\n\nNote: dispatch date to be confirmed post inspection.",
+    "char_count": 258,
+    "source_filename": "missing_date_invoice.txt"
+  },
+  "prompt": null,
+  "raw_llm_response": null,
+  "input_tokens": null,
+  "output_tokens": null,
+  "latency_ms": 0.01,
+  "confidence": 5,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:48:20.916911+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "span_id": "184cc1ce-fd0a-4856-9052-bf91c1e10400",
+  "trace_id": "a8f727c0-029e-443d-b955-cd81939d4586",
+  "doc_id": "86b626ed",
+  "step_name": "intake",
+  "source_filename": "clean_invoice.txt",
+  "input_data": {
+    "source_filename": "clean_invoice.txt"
+  },
+  "output_data": {
+    "doc_id": "86b626ed",
+    "raw_text": "INVOICE #INV-2026-0417\nDate: March 12, 2026\nBill To: Meridian Logistics Pvt Ltd\nFrom: Aster Manufacturing Co.\n\nItem: Industrial packaging units x 500\nUnit Price: $42.00\nTotal Amount: $21,000.00\nCurrency: USD\nPayment Terms: Net 30",
+    "char_count": 229,
+    "source_filename": "clean_invoice.txt"
+  },
+  "prompt": null,
+  "raw_llm_response": null,
+  "input_tokens": null,
+  "output_tokens": null,
+  "latency_ms": 0.01,
+  "confidence": 5,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:47:52.288111+00:00"
+}

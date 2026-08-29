@@ -1,0 +1,25 @@
+{
+  "span_id": "82053dbc-7ba5-43c5-b0ef-8bc8d5f2dfe4",
+  "trace_id": "6464ad60-642f-4150-a2a4-130fdbfdbad5",
+  "doc_id": "d5631824",
+  "step_name": "intake",
+  "source_filename": "ambiguous_category_doc.txt",
+  "input_data": {
+    "source_filename": "ambiguous_category_doc.txt"
+  },
+  "output_data": {
+    "doc_id": "d5631824",
+    "raw_text": "AGREEMENT & PURCHASE CONFIRMATION #DOC-9921\n\nThis document confirms the purchase order raised by Coastline Retailers for\nQ3 stock, AND serves as the binding service contract governing delivery\npenalties, warranty terms, and dispute resolution for the same order.\n\nTotal commitment: $58,400.00\nCurrency: USD\nEffective Date: April 2, 2026",
+    "char_count": 336,
+    "source_filename": "ambiguous_category_doc.txt"
+  },
+  "prompt": null,
+  "raw_llm_response": null,
+  "input_tokens": null,
+  "output_tokens": null,
+  "latency_ms": 0.02,
+  "confidence": 5,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:47:41.823356+00:00"
+}

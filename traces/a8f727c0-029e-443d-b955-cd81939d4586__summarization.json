@@ -1,0 +1,56 @@
+{
+  "span_id": "5cbbe56b-adfe-41f5-914a-a7884cd58cb8",
+  "trace_id": "a8f727c0-029e-443d-b955-cd81939d4586",
+  "doc_id": "86b626ed",
+  "step_name": "summarization",
+  "source_filename": "clean_invoice.txt",
+  "input_data": {
+    "raw_text": "INVOICE #INV-2026-0417\nDate: March 12, 2026\nBill To: Meridian Logistics Pvt Ltd\nFrom: Aster Manufacturing Co.\n\nItem: Industrial packaging units x 500\nUnit Price: $42.00\nTotal Amount: $21,000.00\nCurrency: USD\nPayment Terms: Net 30",
+    "entities": {
+      "parties": [
+        "Meridian Logistics Pvt Ltd",
+        "Aster Manufacturing Co."
+      ],
+      "dates": [
+        "March 12, 2026"
+      ],
+      "amounts": [
+        21000.0
+      ],
+      "currency": "USD",
+      "reference_numbers": [
+        "INV-2026-0417"
+      ],
+      "line_items": [
+        {
+          "description": "Industrial packaging units x 500",
+          "quantity": 500.0,
+          "unit_price": 42.0,
+          "line_total": null
+        }
+      ]
+    },
+    "document_type": "invoice"
+  },
+  "output_data": {
+    "doc_id": "86b626ed",
+    "summary": "Invoice INV-2026-0417 from Aster Manufacturing Co. to Meridian Logistics Pvt Ltd for 500 industrial packaging units at $42.00 each, totaling $21,000.00.",
+    "key_risk_flags": [
+      "Currency mismatch: USD"
+    ],
+    "verified_risk_flags": [],
+    "self_confidence": 5,
+    "raw_llm_response": "{\n  \"summary\": \"Invoice INV-2026-0417 from Aster Manufacturing Co. to Meridian Logistics Pvt Ltd for 500 industrial packaging units at $42.00 each, totaling $21,000.00.\",\n  \"key_risk_flags\": [\"Currency mismatch: USD\"],\n  \"self_confidence\": 5\n}",
+    "input_tokens": 493,
+    "output_tokens": 70
+  },
+  "prompt": null,
+  "raw_llm_response": "{\n  \"summary\": \"Invoice INV-2026-0417 from Aster Manufacturing Co. to Meridian Logistics Pvt Ltd for 500 industrial packaging units at $42.00 each, totaling $21,000.00.\",\n  \"key_risk_flags\": [\"Currency mismatch: USD\"],\n  \"self_confidence\": 5\n}",
+  "input_tokens": 493,
+  "output_tokens": 70,
+  "latency_ms": 3532.67,
+  "confidence": 5,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:48:03.436583+00:00"
+}

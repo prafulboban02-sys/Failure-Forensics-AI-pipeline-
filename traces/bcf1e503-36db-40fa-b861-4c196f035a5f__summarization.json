@@ -1,0 +1,54 @@
+{
+  "span_id": "67c1f1ef-e337-4a1a-89f6-bd3ee685a8cf",
+  "trace_id": "bcf1e503-36db-40fa-b861-4c196f035a5f",
+  "doc_id": "868b58d4",
+  "step_name": "summarization",
+  "source_filename": "missing_date_invoice.txt",
+  "input_data": {
+    "raw_text": "INVOICE #INV-2026-0418\nBill To: Northfield Retail Group\nFrom: Aster Manufacturing Co.\n\nItem: Warehouse shelving units x 120\nUnit Price: $185.50\nTotal Amount: $22,260.00\nCurrency: USD\nPayment Terms: Net 45\n\nNote: dispatch date to be confirmed post inspection.",
+    "entities": {
+      "parties": [
+        "Northfield Retail Group",
+        "Aster Manufacturing Co."
+      ],
+      "dates": [],
+      "amounts": [
+        22560.0
+      ],
+      "currency": "USD",
+      "reference_numbers": [
+        "INV-2026-0418"
+      ],
+      "line_items": [
+        {
+          "description": "Warehouse shelving units x 120",
+          "quantity": 120.0,
+          "unit_price": 185.5,
+          "line_total": null
+        }
+      ]
+    },
+    "document_type": "invoice"
+  },
+  "output_data": {
+    "doc_id": "868b58d4",
+    "summary": "Invoice INV-2026-0418 from Aster Manufacturing Co. to Northfield Retail Group for 120 Warehouse shelving units at $185.50 each, totaling $22,260.00.",
+    "key_risk_flags": [
+      "DATE LOGIC: Dispatch date not specified, but payment terms indicate a 45-day net payment period."
+    ],
+    "verified_risk_flags": [],
+    "self_confidence": 5,
+    "raw_llm_response": "{\n  \"summary\": \"Invoice INV-2026-0418 from Aster Manufacturing Co. to Northfield Retail Group for 120 Warehouse shelving units at $185.50 each, totaling $22,260.00.\",\n  \"key_risk_flags\": [\"DATE LOGIC: Dispatch date not specified, but payment terms indicate a 45-day net payment period.\"],\n  \"self_confidence\": 5\n}",
+    "input_tokens": 486,
+    "output_tokens": 87
+  },
+  "prompt": null,
+  "raw_llm_response": "{\n  \"summary\": \"Invoice INV-2026-0418 from Aster Manufacturing Co. to Northfield Retail Group for 120 Warehouse shelving units at $185.50 each, totaling $22,260.00.\",\n  \"key_risk_flags\": [\"DATE LOGIC: Dispatch date not specified, but payment terms indicate a 45-day net payment period.\"],\n  \"self_confidence\": 5\n}",
+  "input_tokens": 486,
+  "output_tokens": 87,
+  "latency_ms": 4213.96,
+  "confidence": 5,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:49:21.505080+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "span_id": "8c6a3732-0f58-4dc6-ae6d-1c0b7349f87b",
+  "trace_id": "7273e56a-7c00-482e-ba8e-dc0fa3a6c99b",
+  "doc_id": "d1db1d71",
+  "step_name": "intake",
+  "source_filename": "garbled_scan_artifact.txt",
+  "input_data": {
+    "source_filename": "garbled_scan_artifact.txt"
+  },
+  "output_data": {
+    "doc_id": "d1db1d71",
+    "raw_text": "P U R C H A S E   O R D E R\nRef: ###-INVALID-OCR-4471###\n\n[unreadable header]  qty: ?? unit: ??  amt: 4,,200..00  curr: US D\nVendor:  <<name not captured>>\nDelivery window: TBD // TBD // 2026",
+    "char_count": 191,
+    "source_filename": "garbled_scan_artifact.txt"
+  },
+  "prompt": null,
+  "raw_llm_response": null,
+  "input_tokens": null,
+  "output_tokens": null,
+  "latency_ms": 0.01,
+  "confidence": 5,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:49:01.423446+00:00"
+}

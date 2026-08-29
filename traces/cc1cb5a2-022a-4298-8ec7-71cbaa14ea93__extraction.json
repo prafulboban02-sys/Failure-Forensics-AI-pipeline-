@@ -1,0 +1,50 @@
+{
+  "span_id": "9d4f7bd2-926c-4884-a2d9-4039e99c9672",
+  "trace_id": "cc1cb5a2-022a-4298-8ec7-71cbaa14ea93",
+  "doc_id": "21490bcc",
+  "step_name": "extraction",
+  "source_filename": "clean_invoice.txt",
+  "input_data": {
+    "raw_text": "INVOICE #INV-2026-0417\nDate: March 12, 2026\nBill To: Meridian Logistics Pvt Ltd\nFrom: Aster Manufacturing Co.\n\nItem: Industrial packaging units x 500\nUnit Price: $42.00\nTotal Amount: $21,000.00\nCurrency: USD\nPayment Terms: Net 30"
+  },
+  "output_data": {
+    "doc_id": "21490bcc",
+    "entities": {
+      "parties": [
+        "Meridian Logistics Pvt Ltd",
+        "Aster Manufacturing Co."
+      ],
+      "dates": [
+        "March 12, 2026"
+      ],
+      "amounts": [
+        21000.0
+      ],
+      "currency": "USD",
+      "reference_numbers": [
+        "INV-2026-0417"
+      ],
+      "line_items": [
+        {
+          "description": "Industrial packaging units x 500",
+          "quantity": 500.0,
+          "unit_price": 42.0,
+          "line_total": null
+        }
+      ]
+    },
+    "extraction_confidence": 1.0,
+    "raw_llm_response": "{\n  \"parties\": [\"Meridian Logistics Pvt Ltd\", \"Aster Manufacturing Co.\"],\n  \"dates\": [\"March 12, 2026\"],\n  \"amounts\": [21000.0],\n  \"currency\": \"USD\",\n  \"reference_numbers\": [\"INV-2026-0417\"],\n  \"line_items\": [\n    {\n      \"description\": \"Industrial packaging units x 500\",\n      \"quantity\": 500,\n      \"unit_price\": 42.0,\n      \"line_total\": null\n    }\n  ],\n  \"confidence\": 1.0\n}",
+    "input_tokens": 351,
+    "output_tokens": 124
+  },
+  "prompt": null,
+  "raw_llm_response": "{\n  \"parties\": [\"Meridian Logistics Pvt Ltd\", \"Aster Manufacturing Co.\"],\n  \"dates\": [\"March 12, 2026\"],\n  \"amounts\": [21000.0],\n  \"currency\": \"USD\",\n  \"reference_numbers\": [\"INV-2026-0417\"],\n  \"line_items\": [\n    {\n      \"description\": \"Industrial packaging units x 500\",\n      \"quantity\": 500,\n      \"unit_price\": 42.0,\n      \"line_total\": null\n    }\n  ],\n  \"confidence\": 1.0\n}",
+  "input_tokens": 351,
+  "output_tokens": 124,
+  "latency_ms": 5645.25,
+  "confidence": 5,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:48:47.138212+00:00"
+}

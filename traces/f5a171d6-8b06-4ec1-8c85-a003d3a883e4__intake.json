@@ -1,0 +1,25 @@
+{
+  "span_id": "81ffef3a-aa89-43ad-bb41-0bf43144df7a",
+  "trace_id": "f5a171d6-8b06-4ec1-8c85-a003d3a883e4",
+  "doc_id": "f9779490",
+  "step_name": "intake",
+  "source_filename": "currency_mismatch_receipt.txt",
+  "input_data": {
+    "source_filename": "currency_mismatch_receipt.txt"
+  },
+  "output_data": {
+    "doc_id": "f9779490",
+    "raw_text": "RECEIPT #RCPT-77210\nDate: 5 May 2026\nReceived From: Bramwell & Co.\nAmount Paid: 15,000\nCurrency Symbol on Stamp: EUR\nAmount in Words: Fifteen thousand US Dollars\n\nPayment method: Wire Transfer",
+    "char_count": 192,
+    "source_filename": "currency_mismatch_receipt.txt"
+  },
+  "prompt": null,
+  "raw_llm_response": null,
+  "input_tokens": null,
+  "output_tokens": null,
+  "latency_ms": 0.01,
+  "confidence": 5,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:47:12.519563+00:00"
+}

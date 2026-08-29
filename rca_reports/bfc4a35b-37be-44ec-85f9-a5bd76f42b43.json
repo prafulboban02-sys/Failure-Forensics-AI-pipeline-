@@ -1,0 +1,42 @@
+{
+  "trace_id": "bfc4a35b-37be-44ec-85f9-a5bd76f42b43",
+  "doc_id": "a591736f",
+  "source_filename": "currency_mismatch_receipt.txt",
+  "root_cause_step": null,
+  "root_cause_category": "none",
+  "root_cause_explanation": "",
+  "step_verdicts": [
+    {
+      "step_name": "intake",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "Deterministic ingestion step; not LLM-judged.",
+      "specific_issues": []
+    },
+    {
+      "step_name": "extraction",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "[Consensus of 3 judge samples, scores: 5, 5, 5] The step correctly extracted all relevant information from the source text, including parties, dates, amounts, currency, reference numbers, and payment method. The output is complete and accurate, with no signs of hallucination or misclassification.",
+      "specific_issues": []
+    },
+    {
+      "step_name": "classification",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "[Consensus of 3 judge samples, scores: 5, 5, 5] The classification step correctly identified the document as a receipt, with high confidence (0.95) and no ambiguity. The input entities, including the date, amount, and currency, were correctly extracted and used to inform the classification decision.",
+      "specific_issues": []
+    },
+    {
+      "step_name": "summarization",
+      "quality_score": 4,
+      "category": "none",
+      "reasoning": "[Consensus of 3 judge samples, scores: 4, 4, 4] The summarization step correctly extracted the key information from the receipt, including the date, amount, and parties involved. However, it did identify a potential risk flag regarding the currency mismatch, which is a good catch.",
+      "specific_issues": [
+        "Currency mismatch",
+        "currency mismatch flag"
+      ]
+    }
+  ],
+  "pipeline_healthy": true
+}

@@ -1,0 +1,42 @@
+{
+  "span_id": "bc30703f-e6b4-4663-a5f5-7d8f3e12deca",
+  "trace_id": "f5a171d6-8b06-4ec1-8c85-a003d3a883e4",
+  "doc_id": "f9779490",
+  "step_name": "extraction",
+  "source_filename": "currency_mismatch_receipt.txt",
+  "input_data": {
+    "raw_text": "RECEIPT #RCPT-77210\nDate: 5 May 2026\nReceived From: Bramwell & Co.\nAmount Paid: 15,000\nCurrency Symbol on Stamp: EUR\nAmount in Words: Fifteen thousand US Dollars\n\nPayment method: Wire Transfer"
+  },
+  "output_data": {
+    "doc_id": "f9779490",
+    "entities": {
+      "parties": [
+        "Bramwell & Co."
+      ],
+      "dates": [
+        "5 May 2026"
+      ],
+      "amounts": [
+        15000.0
+      ],
+      "currency": "EUR",
+      "reference_numbers": [
+        "RCPT-77210"
+      ],
+      "line_items": []
+    },
+    "extraction_confidence": 1.0,
+    "raw_llm_response": "{\n  \"parties\": [\"Bramwell & Co.\"],\n  \"dates\": [\"5 May 2026\"],\n  \"amounts\": [15000],\n  \"currency\": \"EUR\",\n  \"reference_numbers\": [\"RCPT-77210\"],\n  \"line_items\": [],\n  \"confidence\": 1.0\n}",
+    "input_tokens": 336,
+    "output_tokens": 70
+  },
+  "prompt": null,
+  "raw_llm_response": "{\n  \"parties\": [\"Bramwell & Co.\"],\n  \"dates\": [\"5 May 2026\"],\n  \"amounts\": [15000],\n  \"currency\": \"EUR\",\n  \"reference_numbers\": [\"RCPT-77210\"],\n  \"line_items\": [],\n  \"confidence\": 1.0\n}",
+  "input_tokens": 336,
+  "output_tokens": 70,
+  "latency_ms": 3377.58,
+  "confidence": 5,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:47:15.903380+00:00"
+}

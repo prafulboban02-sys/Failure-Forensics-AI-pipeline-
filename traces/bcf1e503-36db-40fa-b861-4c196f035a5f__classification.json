@@ -1,0 +1,51 @@
+{
+  "span_id": "169eb6e9-fd4b-4c6e-a3c5-92717d8da409",
+  "trace_id": "bcf1e503-36db-40fa-b861-4c196f035a5f",
+  "doc_id": "868b58d4",
+  "step_name": "classification",
+  "source_filename": "missing_date_invoice.txt",
+  "input_data": {
+    "raw_text": "INVOICE #INV-2026-0418\nBill To: Northfield Retail Group\nFrom: Aster Manufacturing Co.\n\nItem: Warehouse shelving units x 120\nUnit Price: $185.50\nTotal Amount: $22,260.00\nCurrency: USD\nPayment Terms: Net 45\n\nNote: dispatch date to be confirmed post inspection.",
+    "entities": {
+      "parties": [
+        "Northfield Retail Group",
+        "Aster Manufacturing Co."
+      ],
+      "dates": [],
+      "amounts": [
+        22560.0
+      ],
+      "currency": "USD",
+      "reference_numbers": [
+        "INV-2026-0418"
+      ],
+      "line_items": [
+        {
+          "description": "Warehouse shelving units x 120",
+          "quantity": 120.0,
+          "unit_price": 185.5,
+          "line_total": null
+        }
+      ]
+    }
+  },
+  "output_data": {
+    "doc_id": "868b58d4",
+    "document_type": "invoice",
+    "classification_confidence": 0.95,
+    "ambiguous": false,
+    "candidate_types": [],
+    "raw_llm_response": "{\n  \"document_type\": \"invoice\",\n  \"confidence\": 0.95,\n  \"ambiguous\": false,\n  \"candidate_types\": []\n}",
+    "input_tokens": 267,
+    "output_tokens": 32
+  },
+  "prompt": null,
+  "raw_llm_response": "{\n  \"document_type\": \"invoice\",\n  \"confidence\": 0.95,\n  \"ambiguous\": false,\n  \"candidate_types\": []\n}",
+  "input_tokens": 267,
+  "output_tokens": 32,
+  "latency_ms": 1990.5,
+  "confidence": 5,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:49:17.284832+00:00"
+}

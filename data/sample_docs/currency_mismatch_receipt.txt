@@ -1,0 +1,8 @@
+RECEIPT #RCPT-77210
+Date: 5 May 2026
+Received From: Bramwell & Co.
+Amount Paid: 15,000
+Currency Symbol on Stamp: EUR
+Amount in Words: Fifteen thousand US Dollars
+
+Payment method: Wire Transfer

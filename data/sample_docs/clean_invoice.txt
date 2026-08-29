@@ -1,0 +1,10 @@
+INVOICE #INV-2026-0417
+Date: March 12, 2026
+Bill To: Meridian Logistics Pvt Ltd
+From: Aster Manufacturing Co.
+
+Item: Industrial packaging units x 500
+Unit Price: $42.00
+Total Amount: $21,000.00
+Currency: USD
+Payment Terms: Net 30

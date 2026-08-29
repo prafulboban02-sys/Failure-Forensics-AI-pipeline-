@@ -1,0 +1,41 @@
+{
+  "trace_id": "571d01d0-6b6b-46c5-b0da-a9173d45bf4f",
+  "doc_id": "f4600305",
+  "source_filename": "missing_date_invoice.txt",
+  "root_cause_step": null,
+  "root_cause_category": "none",
+  "root_cause_explanation": "",
+  "step_verdicts": [
+    {
+      "step_name": "intake",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "Deterministic ingestion step; not LLM-judged.",
+      "specific_issues": []
+    },
+    {
+      "step_name": "extraction",
+      "quality_score": 4,
+      "category": "none",
+      "reasoning": "[Consensus of 3 judge samples, scores: 4, 4, 4] The extraction step accurately identified the parties, amounts, currency, and reference numbers. The only minor issue is that the line total is missing, but this is a reasonable omission given that the unit price and quantity are provided.",
+      "specific_issues": [
+        "missing line total"
+      ]
+    },
+    {
+      "step_name": "classification",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "[Consensus of 3 judge samples, scores: 5, 5, 5] The classification step correctly identified the document as an invoice, with high confidence (0.95). The input entities, including the reference number, parties, and amounts, were accurately extracted and used to inform the classification decision.",
+      "specific_issues": []
+    },
+    {
+      "step_name": "summarization",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "[Consensus of 3 judge samples, scores: 5, 5, 5] The summarization step accurately captured the essential information from the invoice, including the parties involved, the item description, quantity, unit price, and total amount. The step also correctly identified the risk flag related to the missing dispatch date.",
+      "specific_issues": []
+    }
+  ],
+  "pipeline_healthy": true
+}

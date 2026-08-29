@@ -1,0 +1,49 @@
+{
+  "trace_id": "c1bcd1c5-5c19-4848-827d-69343fa6038a",
+  "doc_id": "204d984a",
+  "source_filename": "garbled_scan_artifact.txt",
+  "root_cause_step": "extraction",
+  "root_cause_category": "extraction_hallucination",
+  "root_cause_explanation": "[Consensus of 3 judge samples, scores: 2, 2, 2] The step incorrectly extracted the vendor's name as 'Vendor:  <<name not captured>>', which is not supported by the source text. The text explicitly states that the vendor's name was not captured.",
+  "step_verdicts": [
+    {
+      "step_name": "intake",
+      "quality_score": 5,
+      "category": "none",
+      "reasoning": "Deterministic ingestion step; not LLM-judged.",
+      "specific_issues": []
+    },
+    {
+      "step_name": "extraction",
+      "quality_score": 2,
+      "category": "extraction_hallucination",
+      "reasoning": "[Consensus of 3 judge samples, scores: 2, 2, 2] The step incorrectly extracted the vendor's name as 'Vendor:  <<name not captured>>', which is not supported by the source text. The text explicitly states that the vendor's name was not captured.",
+      "specific_issues": [
+        "extracted vendor name",
+        "incomplete extraction"
+      ]
+    },
+    {
+      "step_name": "classification",
+      "quality_score": 4,
+      "category": "none",
+      "reasoning": "[Consensus of 3 judge samples, scores: 4, 4, 4] The classification step correctly identified the document as a purchase order, despite the presence of OCR errors and missing information. The confidence level of 0.9 is reasonable given the quality of the input text.",
+      "specific_issues": [
+        "invalid OCR reference number",
+        "missing vendor name"
+      ]
+    },
+    {
+      "step_name": "summarization",
+      "quality_score": 4,
+      "category": "none",
+      "reasoning": "[Consensus of 3 judge samples, scores: 4, 4, 4] The step correctly identified missing information (vendor name) and ambiguous information (delivery date) in the source text. It also correctly flagged the unusually large amount as a risk. The only minor issue is that the step did not explicitly report the delivery date as 'TBD' in the output, but this is a minor oversight.",
+      "specific_issues": [
+        "ambiguous delivery date",
+        "missing vendor name",
+        "unusually large amount"
+      ]
+    }
+  ],
+  "pipeline_healthy": false
+}

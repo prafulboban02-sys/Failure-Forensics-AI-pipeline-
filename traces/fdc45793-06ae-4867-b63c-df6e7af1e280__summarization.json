@@ -1,0 +1,50 @@
+{
+  "span_id": "54e91656-04bb-4705-9a58-602847c0ab1e",
+  "trace_id": "fdc45793-06ae-4867-b63c-df6e7af1e280",
+  "doc_id": "48f0b379",
+  "step_name": "summarization",
+  "source_filename": "garbled_scan_artifact.txt",
+  "input_data": {
+    "raw_text": "P U R C H A S E   O R D E R\nRef: ###-INVALID-OCR-4471###\n\n[unreadable header]  qty: ?? unit: ??  amt: 4,,200..00  curr: US D\nVendor:  <<name not captured>>\nDelivery window: TBD // TBD // 2026",
+    "entities": {
+      "parties": [
+        "Vendor:  <<name not captured>>"
+      ],
+      "dates": [
+        "2026"
+      ],
+      "amounts": [
+        4200.0
+      ],
+      "currency": "USD",
+      "reference_numbers": [
+        "###-INVALID-OCR-4471###"
+      ],
+      "line_items": []
+    },
+    "document_type": "purchase_order"
+  },
+  "output_data": {
+    "doc_id": "48f0b379",
+    "summary": "Purchase order with invalid reference number and missing vendor name, delivery date is in 2026 which is in the future.",
+    "key_risk_flags": [
+      "MISSING_PARTY",
+      "DATE_LOGIC",
+      "INVALID_REFERENCE_NUMBER"
+    ],
+    "verified_risk_flags": [],
+    "self_confidence": 5,
+    "raw_llm_response": "{\n  \"summary\": \"Purchase order with invalid reference number and missing vendor name, delivery date is in 2026 which is in the future.\",\n  \"key_risk_flags\": [\"MISSING_PARTY\", \"DATE_LOGIC\", \"INVALID_REFERENCE_NUMBER\"],\n  \"self_confidence\": 5\n}",
+    "input_tokens": 459,
+    "output_tokens": 64
+  },
+  "prompt": null,
+  "raw_llm_response": "{\n  \"summary\": \"Purchase order with invalid reference number and missing vendor name, delivery date is in 2026 which is in the future.\",\n  \"key_risk_flags\": [\"MISSING_PARTY\", \"DATE_LOGIC\", \"INVALID_REFERENCE_NUMBER\"],\n  \"self_confidence\": 5\n}",
+  "input_tokens": 459,
+  "output_tokens": 64,
+  "latency_ms": 3092.97,
+  "confidence": 5,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:48:20.905471+00:00"
+}

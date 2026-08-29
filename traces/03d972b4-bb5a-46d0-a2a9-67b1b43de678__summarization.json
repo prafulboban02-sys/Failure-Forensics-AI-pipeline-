@@ -1,0 +1,48 @@
+{
+  "span_id": "b829786f-4854-4945-a6e4-4db444300673",
+  "trace_id": "03d972b4-bb5a-46d0-a2a9-67b1b43de678",
+  "doc_id": "ecd1da29",
+  "step_name": "summarization",
+  "source_filename": "ambiguous_category_doc.txt",
+  "input_data": {
+    "raw_text": "AGREEMENT & PURCHASE CONFIRMATION #DOC-9921\n\nThis document confirms the purchase order raised by Coastline Retailers for\nQ3 stock, AND serves as the binding service contract governing delivery\npenalties, warranty terms, and dispute resolution for the same order.\n\nTotal commitment: $58,400.00\nCurrency: USD\nEffective Date: April 2, 2026",
+    "entities": {
+      "parties": [
+        "Coastline Retailers"
+      ],
+      "dates": [
+        "April 2, 2026"
+      ],
+      "amounts": [
+        58400.0
+      ],
+      "currency": "USD",
+      "reference_numbers": [
+        "#DOC-9921"
+      ],
+      "line_items": []
+    },
+    "document_type": "contract"
+  },
+  "output_data": {
+    "doc_id": "ecd1da29",
+    "summary": "Purchase order confirmation for Q3 stock between Coastline Retailers and another party (not specified), with a total commitment of $58,400.00 in USD, effective from April 2, 2026.",
+    "key_risk_flags": [
+      "Missing parties"
+    ],
+    "verified_risk_flags": [],
+    "self_confidence": 4,
+    "raw_llm_response": "{\n  \"summary\": \"Purchase order confirmation for Q3 stock between Coastline Retailers and another party (not specified), with a total commitment of $58,400.00 in USD, effective from April 2, 2026.\",\n  \"key_risk_flags\": [\"Missing parties\"],\n  \"self_confidence\": 4\n}",
+    "input_tokens": 466,
+    "output_tokens": 71
+  },
+  "prompt": null,
+  "raw_llm_response": "{\n  \"summary\": \"Purchase order confirmation for Q3 stock between Coastline Retailers and another party (not specified), with a total commitment of $58,400.00 in USD, effective from April 2, 2026.\",\n  \"key_risk_flags\": [\"Missing parties\"],\n  \"self_confidence\": 4\n}",
+  "input_tokens": 466,
+  "output_tokens": 71,
+  "latency_ms": 3623.18,
+  "confidence": 4,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:47:01.084840+00:00"
+}

@@ -1,0 +1,48 @@
+{
+  "span_id": "fe4de697-e7ee-43dd-acf3-705495490acf",
+  "trace_id": "8bc70156-3202-46a5-996a-2160480f4da3",
+  "doc_id": "a46e61e3",
+  "step_name": "summarization",
+  "source_filename": "currency_mismatch_receipt.txt",
+  "input_data": {
+    "raw_text": "RECEIPT #RCPT-77210\nDate: 5 May 2026\nReceived From: Bramwell & Co.\nAmount Paid: 15,000\nCurrency Symbol on Stamp: EUR\nAmount in Words: Fifteen thousand US Dollars\n\nPayment method: Wire Transfer",
+    "entities": {
+      "parties": [
+        "Bramwell & Co."
+      ],
+      "dates": [
+        "5 May 2026"
+      ],
+      "amounts": [
+        15000.0
+      ],
+      "currency": "EUR",
+      "reference_numbers": [
+        "RCPT-77210"
+      ],
+      "line_items": []
+    },
+    "document_type": "receipt"
+  },
+  "output_data": {
+    "doc_id": "a46e61e3",
+    "summary": "Receipt #RCPT-77210 from Bramwell & Co. for 15,000 EUR dated 5 May 2026, paid via wire transfer.",
+    "key_risk_flags": [
+      "Currency mismatch: EUR on stamp vs. USD in words"
+    ],
+    "verified_risk_flags": [],
+    "self_confidence": 4,
+    "raw_llm_response": "{\n  \"summary\": \"Receipt #RCPT-77210 from Bramwell & Co. for 15,000 EUR dated 5 May 2026, paid via wire transfer.\",\n  \"key_risk_flags\": [\"Currency mismatch: EUR on stamp vs. USD in words\"],\n  \"self_confidence\": 4\n}",
+    "input_tokens": 442,
+    "output_tokens": 69
+  },
+  "prompt": null,
+  "raw_llm_response": "{\n  \"summary\": \"Receipt #RCPT-77210 from Bramwell & Co. for 15,000 EUR dated 5 May 2026, paid via wire transfer.\",\n  \"key_risk_flags\": [\"Currency mismatch: EUR on stamp vs. USD in words\"],\n  \"self_confidence\": 4\n}",
+  "input_tokens": 442,
+  "output_tokens": 69,
+  "latency_ms": 3340.83,
+  "confidence": 4,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:48:12.192942+00:00"
+}

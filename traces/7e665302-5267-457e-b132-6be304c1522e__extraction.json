@@ -1,0 +1,42 @@
+{
+  "span_id": "068f06cf-b21b-4e57-bf32-77a9946d16e8",
+  "trace_id": "7e665302-5267-457e-b132-6be304c1522e",
+  "doc_id": "36816e90",
+  "step_name": "extraction",
+  "source_filename": "ambiguous_category_doc.txt",
+  "input_data": {
+    "raw_text": "AGREEMENT & PURCHASE CONFIRMATION #DOC-9921\n\nThis document confirms the purchase order raised by Coastline Retailers for\nQ3 stock, AND serves as the binding service contract governing delivery\npenalties, warranty terms, and dispute resolution for the same order.\n\nTotal commitment: $58,400.00\nCurrency: USD\nEffective Date: April 2, 2026"
+  },
+  "output_data": {
+    "doc_id": "36816e90",
+    "entities": {
+      "parties": [
+        "Coastline Retailers"
+      ],
+      "dates": [
+        "April 2, 2026"
+      ],
+      "amounts": [
+        58400.0
+      ],
+      "currency": "USD",
+      "reference_numbers": [
+        "#DOC-9921"
+      ],
+      "line_items": []
+    },
+    "extraction_confidence": 0.9,
+    "raw_llm_response": "{\n  \"parties\": [\"Coastline Retailers\"],\n  \"dates\": [\"April 2, 2026\"],\n  \"amounts\": [58400.0],\n  \"currency\": \"USD\",\n  \"reference_numbers\": [\"#DOC-9921\"],\n  \"line_items\": [],\n  \"confidence\": 0.9\n}",
+    "input_tokens": 359,
+    "output_tokens": 73
+  },
+  "prompt": null,
+  "raw_llm_response": "{\n  \"parties\": [\"Coastline Retailers\"],\n  \"dates\": [\"April 2, 2026\"],\n  \"amounts\": [58400.0],\n  \"currency\": \"USD\",\n  \"reference_numbers\": [\"#DOC-9921\"],\n  \"line_items\": [],\n  \"confidence\": 0.9\n}",
+  "input_tokens": 359,
+  "output_tokens": 73,
+  "latency_ms": 4256.64,
+  "confidence": 4,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:48:36.399318+00:00"
+}

@@ -1,0 +1,48 @@
+{
+  "span_id": "b03189b4-1c3e-4943-83e0-c9673523e40c",
+  "trace_id": "571d01d0-6b6b-46c5-b0da-a9173d45bf4f",
+  "doc_id": "f4600305",
+  "step_name": "extraction",
+  "source_filename": "missing_date_invoice.txt",
+  "input_data": {
+    "raw_text": "INVOICE #INV-2026-0418\nBill To: Northfield Retail Group\nFrom: Aster Manufacturing Co.\n\nItem: Warehouse shelving units x 120\nUnit Price: $185.50\nTotal Amount: $22,260.00\nCurrency: USD\nPayment Terms: Net 45\n\nNote: dispatch date to be confirmed post inspection."
+  },
+  "output_data": {
+    "doc_id": "f4600305",
+    "entities": {
+      "parties": [
+        "Northfield Retail Group",
+        "Aster Manufacturing Co."
+      ],
+      "dates": [],
+      "amounts": [
+        22560.0
+      ],
+      "currency": "USD",
+      "reference_numbers": [
+        "INV-2026-0418"
+      ],
+      "line_items": [
+        {
+          "description": "Warehouse shelving units x 120",
+          "quantity": 120.0,
+          "unit_price": 185.5,
+          "line_total": null
+        }
+      ]
+    },
+    "extraction_confidence": 1.0,
+    "raw_llm_response": "{\n  \"parties\": [\"Northfield Retail Group\", \"Aster Manufacturing Co.\"],\n  \"dates\": [],\n  \"amounts\": [22560.0],\n  \"currency\": \"USD\",\n  \"reference_numbers\": [\"INV-2026-0418\"],\n  \"line_items\": [\n    {\n      \"description\": \"Warehouse shelving units x 120\",\n      \"quantity\": 120,\n      \"unit_price\": 185.5,\n      \"line_total\": null\n    }\n  ],\n  \"confidence\": 1.0\n}",
+    "input_tokens": 352,
+    "output_tokens": 116
+  },
+  "prompt": null,
+  "raw_llm_response": "{\n  \"parties\": [\"Northfield Retail Group\", \"Aster Manufacturing Co.\"],\n  \"dates\": [],\n  \"amounts\": [22560.0],\n  \"currency\": \"USD\",\n  \"reference_numbers\": [\"INV-2026-0418\"],\n  \"line_items\": [\n    {\n      \"description\": \"Warehouse shelving units x 120\",\n      \"quantity\": 120,\n      \"unit_price\": 185.5,\n      \"line_total\": null\n    }\n  ],\n  \"confidence\": 1.0\n}",
+  "input_tokens": 352,
+  "output_tokens": 116,
+  "latency_ms": 5315.38,
+  "confidence": 5,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:47:35.457621+00:00"
+}

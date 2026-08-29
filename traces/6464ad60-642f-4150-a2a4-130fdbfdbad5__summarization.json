@@ -1,0 +1,48 @@
+{
+  "span_id": "2369469d-81bb-46aa-a1fe-e0420d7f10af",
+  "trace_id": "6464ad60-642f-4150-a2a4-130fdbfdbad5",
+  "doc_id": "d5631824",
+  "step_name": "summarization",
+  "source_filename": "ambiguous_category_doc.txt",
+  "input_data": {
+    "raw_text": "AGREEMENT & PURCHASE CONFIRMATION #DOC-9921\n\nThis document confirms the purchase order raised by Coastline Retailers for\nQ3 stock, AND serves as the binding service contract governing delivery\npenalties, warranty terms, and dispute resolution for the same order.\n\nTotal commitment: $58,400.00\nCurrency: USD\nEffective Date: April 2, 2026",
+    "entities": {
+      "parties": [
+        "Coastline Retailers"
+      ],
+      "dates": [
+        "April 2, 2026"
+      ],
+      "amounts": [
+        58400.0
+      ],
+      "currency": "USD",
+      "reference_numbers": [
+        "#DOC-9921"
+      ],
+      "line_items": []
+    },
+    "document_type": "contract"
+  },
+  "output_data": {
+    "doc_id": "d5631824",
+    "summary": "This document confirms a purchase order for Q3 stock between Coastline Retailers and another party, outlining delivery penalties, warranty terms, and dispute resolution. The total commitment is $58,400.00 USD, effective from April 2, 2026.",
+    "key_risk_flags": [
+      "Currency: USD (no mismatch)"
+    ],
+    "verified_risk_flags": [],
+    "self_confidence": 5,
+    "raw_llm_response": "{\n  \"summary\": \"This document confirms a purchase order for Q3 stock between Coastline Retailers and another party, outlining delivery penalties, warranty terms, and dispute resolution. The total commitment is $58,400.00 USD, effective from April 2, 2026.\",\n  \"key_risk_flags\": [\"Currency: USD (no mismatch)\"],\n  \"self_confidence\": 5\n}",
+    "input_tokens": 466,
+    "output_tokens": 85
+  },
+  "prompt": null,
+  "raw_llm_response": "{\n  \"summary\": \"This document confirms a purchase order for Q3 stock between Coastline Retailers and another party, outlining delivery penalties, warranty terms, and dispute resolution. The total commitment is $58,400.00 USD, effective from April 2, 2026.\",\n  \"key_risk_flags\": [\"Currency: USD (no mismatch)\"],\n  \"self_confidence\": 5\n}",
+  "input_tokens": 466,
+  "output_tokens": 85,
+  "latency_ms": 4010.47,
+  "confidence": 5,
+  "status": "ok",
+  "error_message": null,
+  "timestamp": "2026-08-29T12:47:52.273294+00:00"
+}
