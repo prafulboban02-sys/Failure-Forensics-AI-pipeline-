@@ -72,7 +72,9 @@ def load_report_by_trace_id(trace_id: str) -> RootCauseReport | None:
 
 
 def load_report(json_path: str) -> RootCauseReport:
-    with open(json_path) as f:
+    filename = json_path.replace("\\", "/").rsplit("/", 1)[-1]
+    real_path = os.path.join(REPORTS_DIR, filename)
+    with open(real_path) as f:
         return RootCauseReport.model_validate_json(f.read())
 
 

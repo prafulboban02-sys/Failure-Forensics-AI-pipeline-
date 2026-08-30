@@ -83,7 +83,14 @@ def save_span(span: Span) -> str:
 
 
 def load_span(json_path: str) -> Span:
-    with open(json_path) as f:
+    # json_path in the index may be a stale absolute path baked in on a
+    # different machine (e.g. committed from Windows, read back on a
+    # Linux deploy). Re-anchor to wherever TRACES_DIR actually is now.
+    # Windows paths use backslashes, which os.path.basename() on Linux
+    # won't recognize as separators -- normalize both slash styles first.
+    filename = json_path.replace("\\", "/").rsplit("/", 1)[-1]
+    real_path = os.path.join(TRACES_DIR, filename)
+    with open(real_path) as f:
         return Span.model_validate_json(f.read())
 
 

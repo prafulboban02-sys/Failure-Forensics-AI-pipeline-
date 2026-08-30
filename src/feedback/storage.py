@@ -77,7 +77,9 @@ def save_eval_case(case: EvalCase) -> str:
 
 
 def load_eval_case(json_path: str) -> EvalCase:
-    with open(json_path) as f:
+    filename = json_path.replace("\\", "/").rsplit("/", 1)[-1]
+    real_path = os.path.join(CASES_DIR, filename)
+    with open(real_path) as f:
         return EvalCase.model_validate_json(f.read())
 
 
