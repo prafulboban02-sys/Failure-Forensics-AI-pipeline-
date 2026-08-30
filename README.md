@@ -1,5 +1,10 @@
 # Failure Forensics Tool for AI Pipelines
 
+🔗 **[Live Demo](https://cbkadfcpfxinqyrzin4xm4.streamlit.app/)** — browse real traces, calibration data, and diagnoses (some live-LLM buttons are disabled on the hosted version — see note below)
+📄 **[Case Study](./CASE_STUDY.md)** — 6 real findings from this project's own tooling, including a bug found in a bugfix
+
+> **Note on the live demo:** the hosted version can browse all existing run data and diagnoses, but the "Run New Document" and "Run/Re-run Root-Cause Analysis" buttons need a local LLM (Ollama) or an API key, which isn't available in this hosted environment — those work when you run the project locally.
+
 An observability layer for multi-step AI pipelines that traces every
 intermediate step, identifies exactly where failures originate, and feeds
 flagged failures into a growing evaluation dataset.
